@@ -16,19 +16,21 @@ from jose import jwe, jws, jwt
 
 def decode_access_token(authorisation_token):
     TEST = "eyJhbGciOiJkaXIiLCJlbmMiOiJBMjU2R0NNIn0..jwv1zIaiPCcji0-lT4MF9A.PEM0NQ5LuicwWqDvzvAoIlpHq3d6R5dt_rOJbrLvXV12pI4cMy3ooCGiiROOTFRkdnj_cge9a29Wm5QatccgJ7U9ao_YBW6Az33Vn4o2RjiRPiAFJA.OzmRfSDdsmZXM0UkhafsfA"
-    print(authorisation_token)
-    print(TEST)
+    TEST2= "eyJhbGciOiJkaXIiLCJlbmMiOiJBMjU2R0NNIn0..yta4b2GIgWE62x-bEjkVBg.ymXYrMxrC4PxYUnZl5la5MfoseWcxQgID-vaD2OgbdeC7xRpxgOykirjbqfnlbCL30gsRNTudRjqcc7s3IPSc7XBRU9gNyxUTGqrKW82v5SjCjnU.g1CzngLUoI8aG32Fd3dfqQe"
+    #print(authorisation_token)
+    #print(TEST)
+    print(TEST2)
     # get public key from jwks uri
 
     # gives the set of jwks keys.the keys has to be passed as it is to jwt.decode() for signature verification.
     key = b'y\xf8l\xf3\xf7n\xd5y\xcf]N\xd4P;\nuy\xa2\x96\xc6\xc6~@\x00\x96\rn\x1dq]\x12\xd6'
 
     # get the algorithm type from the request header
-    algorithm = jwt.get_unverified_header(authorisation_token).get('alg')
-    print(jwt.get_unverified_header(TEST))
+    #algorithm = jwt.get_unverified_header(authorisation_token).get('alg')
+    #print(jwt.get_unverified_header(TEST))
+    print(jwt.get_unverified_header(TEST2))
 
-
-    user_info = jwe.decrypt(TEST,
+    user_info = jwe.decrypt(TEST2,
                            key=key)
 
     return user_info
