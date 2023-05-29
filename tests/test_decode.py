@@ -17,6 +17,7 @@ from jose import jwe, jws, jwt
 def decode_access_token(authorisation_token):
     TEST = "eyJhbGciOiJkaXIiLCJlbmMiOiJBMjU2R0NNIn0..jwv1zIaiPCcji0-lT4MF9A.PEM0NQ5LuicwWqDvzvAoIlpHq3d6R5dt_rOJbrLvXV12pI4cMy3ooCGiiROOTFRkdnj_cge9a29Wm5QatccgJ7U9ao_YBW6Az33Vn4o2RjiRPiAFJA.OzmRfSDdsmZXM0UkhafsfA"
     TEST2= "eyJhbGciOiJkaXIiLCJlbmMiOiJBMjU2R0NNIn0..yta4b2GIgWE62x-bEjkVBg.ymXYrMxrC4PxYUnZl5la5MfoseWcxQgID-vaD2OgbdeC7xRpxgOykirjbqfnlbCL30gsRNTudRjqcc7s3IPSc7XBRU9gNyxUTGqrKW82v5SjCjnU.g1CzngLUoI8aG32Fd3dfqQe"
+    TEST2= "eyJhbGciOiJkaXIiLCJlbmMiOiJBMjU2R0NNIn0..RQEWaFb_T06bCV7TPf874g.0YGh9jtMDGSMVo8obR8mfldoSboRhFQNLP3FqNlGZyn3_yW-8CdyqQbvsLp3xkjNH30ulOaDXVZCeZkULmKUJ9ojnGt4.kkTwu7Q7wWJ9Vb9y-mOd3A"
     #print(authorisation_token)
     #print(TEST)
     print(TEST2)
